@@ -35,8 +35,8 @@ import static android.Manifest.permission.WRITE_EXTERNAL_STORAGE;
 //import static com.arthenica.mobileffmpeg.Config.RETURN_CODE_SUCCESS;
 
 public class MainActivity extends AppCompatActivity {
-    private static final String API_KEY = "JEZoDtAZDpSBxGJ4RcmyRfoI3HzCHRjQf3JELr-uTISs";
-    private static final String URL = "https://api.us-south.speech-to-text.watson.cloud.ibm.com/instances/661f3e57-7e35-42b5-bd58-70cb1502fdcb";
+    private static final String API_KEY = "your api key";
+    private static final String URL = "your url";
     Button buttonStart, buttonStop, buttonConvert;
     TextView showData;
     String AudioSavePathInDevice = null,threeGptoMp3 = null;
@@ -100,8 +100,8 @@ public class MainActivity extends AppCompatActivity {
         String state = Environment.getExternalStorageState();
         if (Environment.MEDIA_MOUNTED.equals(state)) {
             UUID uuid=UUID.randomUUID();
-            AudioSavePathInDevice = Environment.getExternalStorageDirectory().getAbsolutePath() + "/" + "sailorsAudioRecording"+ uuid +".3gp";
-            threeGptoMp3 = Environment.getExternalStorageDirectory().getAbsolutePath() + "/" + "sailorsAudioRecordingM"+ uuid +".mp3";
+            AudioSavePathInDevice = Environment.getExternalStorageDirectory().getAbsolutePath() + "/" + "assistAudioRecording"+ uuid +".3gp";
+            threeGptoMp3 = Environment.getExternalStorageDirectory().getAbsolutePath() + "/" + "assistAudioRecordingM"+ uuid +".mp3";
             mediaRecorder=new MediaRecorder();
             mediaRecorder.setAudioSource(MediaRecorder.AudioSource.MIC);
             mediaRecorder.setOutputFormat(MediaRecorder.OutputFormat.THREE_GPP);
